@@ -13,8 +13,8 @@ public class AP {
 
 	public static void main(String[] args) {
 
-		String inFile = "../Go/MS2/Go1.in";
-		String outFile = "../Go/MS2/Go11.out";
+		String inFile = "Go/MS2/Go1.in";
+		String outFile = "Go/MS2/Go11.out";
 		if (args.length > 1) {
 			inFile = args[0];
 		}
@@ -28,8 +28,6 @@ public class AP {
 
 			@SuppressWarnings("deprecation")
 			parser parser = new parser(new Lexer(bis));
-			System.out.println( parser.equals(null));
-
 			try {
 				Symbol res = parser.parse();
 				String value = (String)res.value;
@@ -37,8 +35,7 @@ public class AP {
 				writer.write("Done");
 				System.out.println("DONE");
 			} catch (Exception e) {
-				System.out.println("error");
-
+				e.printStackTrace();
 				writer.write("ParseError");
 			}
 			

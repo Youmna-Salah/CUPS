@@ -1,47 +1,11 @@
+import java.util.Stack;
 import java.lang.System;
 import java.io.*;
-import java.util.Stack;
 import java_cup.runtime.Symbol;
-class Lexer{
-
-	Yylex tokenizer;
-	boolean end = false;
-	public  Lexer(BufferedReader br) 
-	{
-	  try
-	  {
-	  tokenizer=new Yylex(br);
-	  }
-	  catch(Exception e)
-	  {
-	  
-	  }	 
-	}
-	public Token nextToken()
-	{
-		Token next=null;
-		try
-		{
-			//if(!end) {
-				 next=  tokenizer.getToken();
-				 if(next.getTokenType() == 48) {
-			 		end = true;
-			 	}		
-			//}
-		 
-		}
-		catch(Exception e)
-		{
-		}
-		return next;
-	}
-		public Symbol next_token() {
-		Token t = nextToken();
-		System.out.print();
-		return new Symbol(t.getTokenType());
-	}
-	}
 %%
+%class Lexer
+
+%implements java_cup.runtime.Scanner
 %function next_token
 %type java_cup.runtime.Symbol
 %char

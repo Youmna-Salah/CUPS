@@ -1,42 +1,10 @@
+import java.util.Stack;
 import java.lang.System;
 import java.io.*;
-import java.util.Stack;
 import java_cup.runtime.Symbol;
-class Lexer{
-	Yylex tokenizer;
-	boolean end = false;
-	public  Lexer(BufferedReader br) 
-	{
-	  try
-	  {
-	  tokenizer=new Yylex(br);
-	  }
-	  catch(Exception e)
-	  {
-	  }	 
-	}
-	public Symbol nextToken()
-	{
-		Symbol next=null;
-		try
-		{
-			//if(!end) {
-				 next=  tokenizer.next_token();
-				 if(next.equals(48)) {
-			 		end = true;
-			 	}		
-			//}
-		}
-		catch(Exception e)
-		{
-		}
-		return next;
-	}
-		
-	}
 
 
-class Yylex {
+class Lexer implements java_cup.runtime.Scanner {
 	private final int YY_BUFFER_SIZE = 512;
 	private final int YY_F = -1;
 	private final int YY_NO_STATE = -1;
@@ -65,7 +33,7 @@ private static String Quoted ="";
 	private boolean yy_at_bol;
 	private int yy_lexical_state;
 
-	Yylex (java.io.Reader reader) {
+	Lexer (java.io.Reader reader) {
 		this ();
 		if (null == reader) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -73,7 +41,7 @@ private static String Quoted ="";
 		yy_reader = new java.io.BufferedReader(reader);
 	}
 
-	Yylex (java.io.InputStream instream) {
+	Lexer (java.io.InputStream instream) {
 		this ();
 		if (null == instream) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -81,7 +49,7 @@ private static String Quoted ="";
 		yy_reader = new java.io.BufferedReader(new java.io.InputStreamReader(instream));
 	}
 
-	private Yylex () {
+	private Lexer () {
 		yy_buffer = new char[YY_BUFFER_SIZE];
 		yy_buffer_read = 0;
 		yy_buffer_index = 0;

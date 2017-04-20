@@ -37,8 +37,8 @@ public class parser extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\005\000\004\061\004\001\002\000\004\034\007\001" +
-    "\002\000\004\002\006\001\002\000\004\002\000\001\002" +
+    "\000\005\000\004\056\005\001\002\000\004\002\007\001" +
+    "\002\000\004\060\006\001\002\000\004\002\000\001\002" +
     "\000\004\002\001\001\002" });
 
   /** Access to parse-action table. */
@@ -47,7 +47,7 @@ public class parser extends java_cup.runtime.lr_parser {
   /** <code>reduce_goto</code> table. */
   protected static final short[][] _reduce_table = 
     unpackFromStrings(new String[] {
-    "\000\005\000\004\002\004\001\001\000\002\001\001\000" +
+    "\000\005\000\004\002\003\001\001\000\002\001\001\000" +
     "\002\001\001\000\002\001\001\000\002\001\001" });
 
   /** Access to <code>reduce_goto</code> table. */
@@ -77,7 +77,7 @@ public class parser extends java_cup.runtime.lr_parser {
   /** Indicates start state. */
   public int start_state() {return 0;}
   /** Indicates start production. */
-  public int start_production() {return 1;}
+  public int start_production() {return 0;}
 
   /** <code>EOF</code> Symbol index. */
   public int EOF_sym() {return 0;}
@@ -111,22 +111,7 @@ class CUP$parser$actions {
       switch (CUP$parser$act_num)
         {
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 0: // package_list ::= PACKAGE IDENTIFIER 
-            {
-              String RESULT =null;
-		int ileft = ((java_cup.runtime.Symbol)CUP$parser$stack.peek()).left;
-		int iright = ((java_cup.runtime.Symbol)CUP$parser$stack.peek()).right;
-		Object i = (Object)((java_cup.runtime.Symbol) CUP$parser$stack.peek()).value;
-		
-                    System.out.println("package "+ i); 				
-					RESULT = "";
-				
-              CUP$parser$result = parser.getSymbolFactory().newSymbol("package_list",0, ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
-            }
-          return CUP$parser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 1: // $START ::= package_list EOF 
+          case 0: // $START ::= package_list EOF 
             {
               Object RESULT =null;
 		int start_valleft = ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
@@ -137,6 +122,15 @@ class CUP$parser$actions {
             }
           /* ACCEPT */
           CUP$parser$parser.done_parsing();
+          return CUP$parser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 1: // package_list ::= PACKAGE IDENTIFIER 
+            {
+              String RESULT =null;
+
+              CUP$parser$result = parser.getSymbolFactory().newSymbol("package_list",0, ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
+            }
           return CUP$parser$result;
 
           /* . . . . . .*/
