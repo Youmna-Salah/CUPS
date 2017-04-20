@@ -46,7 +46,7 @@ public class parser extends java_cup.runtime.lr_parser {
     "\000\002\043\004\000\002\043\004\000\002\043\004\000" +
     "\002\044\003\000\002\044\002\000\002\045\003\000\002" +
     "\045\003\000\002\045\003\000\002\045\003\000\002\046" +
-    "\003\000\002\047\004\000\002\050\004\000\002\050\004" +
+    "\003\000\002\047\004\000\002\050\003\000\002\050\003" +
     "\000\002\051\005\000\002\052\004\000\002\053\003\000" +
     "\002\053\003\000\002\053\002\000\002\054\007\000\002" +
     "\055\004\000\002\055\002\000\002\056\004\000\002\056" +
@@ -72,8 +72,8 @@ public class parser extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\005\000\004\056\005\001\002\000\004\002\007\001" +
-    "\002\000\004\055\006\001\002\000\004\002\000\001\002" +
+    "\000\005\000\004\057\005\001\002\000\004\002\007\001" +
+    "\002\000\004\056\006\001\002\000\004\002\000\001\002" +
     "\000\004\002\001\001\002" });
 
   /** Access to parse-action table. */
@@ -655,20 +655,20 @@ class CUP$parser$actions {
           return CUP$parser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 56: // sub_inc_dec_stmt ::= PLUS PLUS 
+          case 56: // sub_inc_dec_stmt ::= INCREMENT 
             {
               String RESULT =null;
 
-              CUP$parser$result = parser.getSymbolFactory().newSymbol("sub_inc_dec_stmt",38, ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
+              CUP$parser$result = parser.getSymbolFactory().newSymbol("sub_inc_dec_stmt",38, ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
             }
           return CUP$parser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 57: // sub_inc_dec_stmt ::= MINUS MINUS 
+          case 57: // sub_inc_dec_stmt ::= DECREMENT 
             {
               String RESULT =null;
 
-              CUP$parser$result = parser.getSymbolFactory().newSymbol("sub_inc_dec_stmt",38, ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
+              CUP$parser$result = parser.getSymbolFactory().newSymbol("sub_inc_dec_stmt",38, ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
             }
           return CUP$parser$result;
 

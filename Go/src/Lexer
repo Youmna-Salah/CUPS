@@ -36,6 +36,7 @@ CONST=const
 EQUAL=[\=]
 PLUS =[+]
 INCREMENT =\++
+DECREMENT =--
 MINUS =[-]
 VAR=var
 BREAK=break
