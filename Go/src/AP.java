@@ -10,8 +10,8 @@ public class AP {
 
 	public static void main(String[] args) {
 
-		String inFile = "MS2/Go1.in";
-		String outFile = "MS2/Go11.out";
+		String inFile = "/Users/maggiemoheb/Desktop/GUC/10th semester/Advanced Lab/Project/Milestone2/CUPS/Go/MS2/Go1.in";
+		String outFile = "/Users/maggiemoheb/Desktop/GUC/10th semester/Advanced Lab/Project/Milestone2/CUPS/Go/MS2/Go11.out";
 		if (args.length > 1) {
 			inFile = args[0];
 		}
@@ -28,7 +28,7 @@ public class AP {
 			try {
 				parser.parse();
 				writer.write("Done");
-				// System.out.println("DONE");
+				 System.out.println("DONE");
 			} catch (Exception e) {
 				e.printStackTrace();
 				writer.write("ParseError");

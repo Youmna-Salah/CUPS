@@ -36,8 +36,10 @@ CONST=const
 EQUAL=[\=]
 PLUS =[+]
 INCREMENT =\++
+DECREMENT =--
 MINUS =[-]
 VAR=var
+BREAK=break
 IF =if
 ASTRISK =\*
 COLON_EQUAL = \:=
