@@ -51,7 +51,6 @@ terminal String DOT;
 terminal String COLON;
 terminal String ELSE;
 /* Non terminals */
-non terminal  String   package_list;
 non terminal  String   element_list;
 non terminal  String   sub_element_list;
 non terminal  String   keyed_element;
@@ -134,10 +133,8 @@ non terminal  String   sub_sub_import_decl;
 non terminal  String   sub_import_decll;
 non terminal  String   import_path;
 
-start with package_list ;
 /* Precedences */
 
-package_list ::=  PACKAGE IDENTIFIER;
 element_list ::=  keyed_element sub_element_list;
 sub_element_list ::= COMMA keyed_element sub_element_list|;
 keyed_element ::= sub_keyed_element element;
