@@ -5,7 +5,6 @@ import java.io.DataInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-import java_cup.runtime.Symbol;
 
 public class AP {
 
