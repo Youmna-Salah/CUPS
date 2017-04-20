@@ -38,6 +38,7 @@ PLUS =[+]
 INCREMENT =\++
 MINUS =[-]
 VAR=var
+BREAK=break
 IF =if
 ASTRISK =\*
 COLON_EQUAL = \:=
