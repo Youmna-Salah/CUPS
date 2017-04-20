@@ -41,10 +41,12 @@ public class sym {
   public static final int SEMI_COLON = 21;
   public static final int SWITCH = 41;
   public static final int CLOSE_PARAN = 23;
+  public static final int IMPORT = 48;
   public static final int COLON = 20;
   public static final int CLOSE_CURLY = 31;
   public static final int ELSE = 14;
   public static final int FUNC = 11;
+  public static final int PACKAGE = 47;
   public static final int DEFAULT = 43;
   public static final int SINGLE_OR = 28;
   public static final int STRUCT = 45;
@@ -100,7 +102,9 @@ public class sym {
   "DEFAULT",
   "FOR",
   "STRUCT",
-  "OR_OPR"
+  "OR_OPR",
+  "PACKAGE",
+  "IMPORT"
   };
 }
 
