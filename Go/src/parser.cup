@@ -3,17 +3,250 @@ import java_cup.runtime.*;
 
 
 /* Terminals (tokens returned by the scanner). */
-terminal  CONST, EQUAL, PLUS, INCREMENT, MINUS, VAR,
-IF, FUNC, ASTRISK, COLON_EQUAL, 
-ELSE, PERCENT, COMMENT, AND_OP, REL_OP, RETURN, COLON, SEMI_COLON,
-OPEN_PARAN, CLOSE_PARAN, OPEN_SQUARE, CLOSE_SQUARE, GREATER_EQUAL, SINGLE_OR,
-STRING_TEXT, OPEN_CURLY, CLOSE_CURLY, DOT, COMMA, TYPE, INT_LIT, SMALLER, GREATER, EQUAL_EQUAL, LESS_EQUAL,
-SLASH, SWITCH, CASE, DEFAULT, FOR, STRUCT, OR_OPR, PACKAGE,
+terminal String CONST, INCREMENT, VAR,
+IF, COLON_EQUAL, 
+ELSE, COMMENT, REL_OP, RETURN, 
+ DOT, COMMA, TYPE, INT_LIT,
+SLASH, SWITCH, CASE, DEFAULT, FOR, STRUCT, PACKAGE,
 IMPORT;
+terminal String EQUAL;
+terminal String COLON;
 terminal String IDENTIFIER;
+terminal String OR_OPR;
+terminal String AND_OP;
+terminal String DOTS;
+terminal String GREATER;
+terminal String SMALLER;
+terminal String LESS_EQUAL;
+terminal String GREATER_EQUAL;
+terminal String EQUAL_EQUAL;
+terminal String PLUS;
+terminal String MINUS;
+terminal String SINGLE_OR;
+terminal String ASTRISK;
+terminal String DIVIDE;
+terminal String PERCENT;
+terminal String SHIFTLEFT;
+terminal String SHIFTRIGHT;
+terminal String SINGLE_AND;
+terminal String STRING_TEXT;
+terminal String OPEN_SQUARE;
+terminal String OPEN_CURLY;
+terminal String OPEN_PARAN;
+terminal String CLOSE_SQUARE;
+terminal String CLOSE_CURLY;
+terminal String CLOSE_PARAN;
+terminal String FUNC;
+terminal String EXLIM;
+terminal String INFER;
 /* Non terminals */
-non terminal  String   package_list;
-start with package_list ;
+nonterminal  String   package_list;
+nonterminal  String element_list;
+nonterminal String group_var_spec;
+nonterminal String tag;
+nonterminal String zero_more_identifier_list;
+nonterminal String zero_more_expression_list;
+nonterminal String expression_list;
+nonterminal String unary_expr;
+nonterminal String group_type_decl;
+nonterminal String type_spec;
+nonterminal String zero_more_group_type_decl;
+nonterminal String primary_expr;
+nonterminal String var_spec;
+ nonterminal  String binary_op;
+ nonterminal  String rel_op;
+ nonterminal  String add_op; nonterminal  String mul_op;
+ nonterminal  String type; nonterminal  String type_name; nonterminal  String type_lit; nonterminal  String array_type;
+ nonterminal  String array_length;
+ nonterminal String signature;
+ nonterminal String basic_lit;
+ nonterminal  String slice_type;
+ nonterminal  String struct_type;
+ nonterminal  String zero_one_astrisk;
+ nonterminal String composite_lit;
+ nonterminal String function;
+nonterminal String receiver;
+nonterminal String operand;
+nonterminal String operand_name;
+nonterminal  String zero_more_struct_type;
+nonterminal  String field_decl; nonterminal  String zero_one_tag;
+nonterminal String zero_one_result;
+nonterminal String zero_one_param_list;
+nonterminal String statment;
+nonterminal String parameter_list;
+nonterminal String statment_list;
+nonterminal String const_decl;
+nonterminal String declartion;
+nonterminal String type_decl;
+nonterminal String parameter_decl;
+nonterminal String group_const_decl;
+nonterminal String top_level_decl;
+nonterminal String one_more_const_spec;
+nonterminal String zero_one_const_spec;
+nonterminal String zero_one_type;
+nonterminal String const_spec;
+nonterminal String block;
+nonterminal String zero_one_dot;
+nonterminal String parameters;
+nonterminal  String group_field_decl; nonterminal  String anonymous_field; nonterminal  String identifier_list;
+nonterminal String zero_one_element_list;
+nonterminal String literal_value;
+nonterminal String zero_one_expression;
+nonterminal String SEMI_COLON; nonterminal String zero_one_semi;
+nonterminal String zero_more_var_spec;
+nonterminal String function_lit;
+nonterminal String literal_type;
+nonterminal String literal;
+nonterminal String expression;
+nonterminal String method_expr;
+nonterminal String group_function_decl;
+nonterminal String function_body;
+nonterminal String zero_more_statment;
+nonterminal String method_name;
+nonterminal String zero_more_parameter_list;
+nonterminal String method_decl;
+nonterminal String short_var_decl;
+nonterminal String var_decl;
+nonterminal String function_decl;
+nonterminal String group_var_decl;
+nonterminal String function_name;
+nonterminal String result;
+nonterminal String unary_op;
+nonterminal String function_type;
+nonterminal String element_type;
+
+
+
+start with package_list;
+
 /* Precedences */
 
 package_list ::=  PACKAGE IDENTIFIER;
+
+binary_op ::= OR_OPR|AND_OP|REL_OP| add_op|mul_op;
+add_op ::= PLUS|MINUS|SINGLE_OR;
+mul_op ::= ASTRISK|DIVIDE|PERCENT|SHIFTRIGHT|SHIFTLEFT|SINGLE_AND;
+unary_op ::= PLUS|MINUS|EXLIM|ASTRISK|SINGLE_AND|INFER;
+type ::= type_name| type_lit;
+type_name ::= IDENTIFIER;
+type_lit ::= array_type| struct_type|function_type|slice_type;
+array_type ::= OPEN_SQUARE array_length CLOSE_SQUARE element_type;
+array_length ::= expression;
+element_type ::= type; 
+
+slice_type ::= OPEN_SQUARE CLOSE_SQUARE element_type;
+
+struct_type ::= STRUCT OPEN_CURLY zero_more_struct_type CLOSE_CURLY;
+zero_more_struct_type ::= field_decl SEMI_COLON zero_more_struct_type | ;
+
+field_decl ::= group_field_decl zero_one_tag; 
+zero_one_tag ::= tag|;
+group_field_decl ::= identifier_list type| anonymous_field| ;
+
+anonymous_field ::= zero_one_astrisk type_name;
+zero_one_astrisk ::= ASTRISK| ;
+
+tag ::= STRING_TEXT;
+function_type ::= FUNC signature;
+
+signature ::= parameters zero_one_result;
+zero_one_result ::= result| ;
+
+result ::= parameters| OPEN_PARAN type CLOSE_PARAN;
+
+parameters ::= OPEN_PARAN zero_one_param_list CLOSE_PARAN;
+zero_one_param_list ::= parameter_list| ;
+
+parameter_list ::= parameter_decl zero_more_parameter_list;
+zero_more_parameter_list::= COMMA parameter_decl zero_more_parameter_list| ;
+
+parameter_decl ::= identifier_list zero_one_dot type;
+zero_one_dot ::= DOTS| ;
+
+method_name ::= IDENTIFIER;
+
+block ::= OPEN_CURLY statment_list CLOSE_CURLY;
+
+statment_list ::= zero_more_statment;
+zero_more_statment ::= statment zero_more_statment| ;
+
+declartion ::= const_decl SEMI_COLON| type_decl SEMI_COLON| var_decl SEMI_COLON;
+
+top_level_decl ::= declartion |function_decl zero_one_semi| method_decl zero_one_semi;
+zero_one_semi ::= SEMI_COLON| ;
+
+const_decl ::= CONST group_const_decl;
+group_const_decl ::= const_spec|OPEN_PARAN one_more_const_spec CLOSE_PARAN;
+one_more_const_spec ::= const_spec SEMI_COLON one_more_const_spec| ;
+
+const_spec ::= IDENTIFIER zero_one_const_spec;
+zero_one_const_spec ::= zero_one_type EQUAL expression;
+zero_one_type ::= type| ;
+
+
+identifier_list ::= IDENTIFIER zero_more_identifier_list;
+zero_more_identifier_list ::= SEMI_COLON IDENTIFIER zero_more_identifier_list| ;
+
+expression_list ::= expression zero_more_expression_list;
+zero_more_expression_list ::= COMMA expression zero_more_expression_list| ;
+
+expression ::= unary_expr | expression binary_op expression;
+unary_expr ::= primary_expr |unary_op unary_expr;
+
+type_decl ::= TYPE group_type_decl;
+
+group_type_decl ::= type_spec| OPEN_PARAN zero_more_group_type_decl;
+zero_more_group_type_decl ::= OPEN_PARAN type_spec CLOSE_PARAN SEMI_COLON;
+
+type_spec ::= IDENTIFIER type;
+var_decl ::= VAR group_var_decl;
+group_var_decl ::= var_spec| OPEN_PARAN zero_more_var_spec CLOSE_PARAN;
+zero_more_var_spec ::= var_spec SEMI_COLON zero_more_var_spec| ;
+
+var_spec ::= IDENTIFIER group_var_spec;
+group_var_spec ::= type zero_one_expression|EQUAL expression;
+zero_one_expression ::= EQUAL expression| ;
+
+short_var_decl ::= identifier_list COLON_EQUAL expression;
+
+function_decl ::= FUNC function_name group_function_decl;
+group_function_decl ::= function| signature;	
+
+function_name ::= IDENTIFIER;
+function ::= signature function_body;
+function_body::= block;
+
+method_decl::= FUNC receiver method_name group_function_decl;
+
+
+receiver ::= parameters;
+operand ::= literal |operand_name | method_expr| OPEN_PARAN expression CLOSE_PARAN;
+
+literal ::= basic_lit | composite_lit| function_lit;
+
+composite_lit ::= literal_type literal_value;
+literal_type ::= struct_type|array_type| OPEN_SQUARE DOTS CLOSE_SQUARE element_type| slice_type| TYPE type_name;
+
+literal_value ::= OPEN_CURLY zero_one_element_list CLOSE_CURLY;
+zero_one_element_list::= element_list| ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
