@@ -15,11 +15,6 @@ terminal String IDENTIFIER;
 terminal String OR_OPR;
 terminal String AND_OP;
 terminal String DOTS;
-terminal String GREATER;
-terminal String SMALLER;
-terminal String LESS_EQUAL;
-terminal String GREATER_EQUAL;
-terminal String EQUAL_EQUAL;
 terminal String PLUS;
 terminal String MINUS;
 terminal String SINGLE_OR;
@@ -39,11 +34,88 @@ terminal String CLOSE_PARAN;
 terminal String FUNC;
 terminal String EXLIM;
 terminal String INFER;
+terminal String Const;
+terminal String DECREMENT;
+terminal String BREAK;
+terminal String GREATER_EQUAL;
+terminal String SMALLER;
+terminal String GREATER;
+terminal String EQUAL_EQUAL;
+terminal String LESS_EQUAL;
 /* Non terminals */
-nonterminal  String   package_list;
-nonterminal  String element_list;
-nonterminal String group_var_spec;
-nonterminal String tag;
+non terminal  String   sub_element_list;
+non terminal  String   keyed_element;
+non terminal  String   sub_keyed_element;
+non terminal  String   key;
+non terminal  String   element;
+non terminal  String   field_name;
+non terminal  String   expression;
+non terminal  String   qualified_ident;
+non terminal  String   package_name;
+non terminal  String   selector;
+non terminal  String   index;
+non terminal  String   slice;
+non terminal  String   sub_slice;
+non terminal  String   arguments;
+non terminal  String   sub_arguments;
+non terminal  String   sub_sub_arguments;
+non terminal  String   sub_type;
+non terminal  String   sub_sub_type;
+non terminal  String   function_lit;
+non terminal  String   method_expr;
+non terminal  String   receiver_type;
+non terminal  String   method_name;
+non terminal  String   statement;
+non terminal  String   sub_semi_colon;
+non terminal  String   simple_stmt;
+non terminal  String   expression_stmt;
+non terminal  String   inc_dec_stmt;
+non terminal  String   sub_inc_dec_stmt;
+non terminal  String   assignment;
+non terminal  String   assign_op;
+non terminal  String   sub_assign_op;
+non terminal  String   if_stmt;
+non terminal  String   sub_if_stmt;
+non terminal  String   sub_else_stmt;
+non terminal  String   sub_sub_else_stmt;
+non terminal  String   switch_stmt;
+non terminal  String   declaration;
+non terminal  String   return_stmt;
+non terminal  String   break_stmt;
+non terminal  String   block;
+non terminal  String   for_stmt;
+non terminal  String   short_var_decl;
+non terminal  String   expr_switch_stmt;
+non terminal  String   sub_expr_switch_stmt;
+non terminal  String   sub_expr_switch_expr_stmt;
+non terminal  String   zero_expr_switch_stmt;
+non terminal  String   expr_case_clause;
+non terminal  String   expr_switch_case;
+non terminal  String   statement_list;
+non terminal  String   sub_for_stmt;
+non terminal  String   condition;
+non terminal  String   for_clause;
+non terminal  String   sub_init_stmt;
+non terminal  String   sub_condition;
+non terminal  String   sub_post_stmt;
+non terminal  String   init_stmt;
+non terminal  String   post_stmt;
+non terminal  String   sub_return_stmt;
+non terminal  String   package_clause;
+non terminal  String   sub_import_decl;
+non terminal  String   sub_top_level_decl;
+non terminal  String   import_decl;
+non terminal  String   top_level_decl;
+non terminal  String   source_file;
+non terminal  String   import_spec;
+non terminal  String   sub_import_spec;
+non terminal  String   sub_sub_import_decl;
+non terminal  String   sub_import_decll;
+non terminal  String   import_path;
+nonterminal  String    package_list;
+nonterminal  String    element_list;
+nonterminal String 	  group_var_spec;
+nonterminal String 	 tag;
 nonterminal String zero_more_identifier_list;
 nonterminal String zero_more_expression_list;
 nonterminal String expression_list;
@@ -80,12 +152,10 @@ nonterminal String declartion;
 nonterminal String type_decl;
 nonterminal String parameter_decl;
 nonterminal String group_const_decl;
-nonterminal String top_level_decl;
 nonterminal String one_more_const_spec;
 nonterminal String zero_one_const_spec;
 nonterminal String zero_one_type;
 nonterminal String const_spec;
-nonterminal String block;
 nonterminal String zero_one_dot;
 nonterminal String parameters;
 nonterminal  String group_field_decl; nonterminal  String anonymous_field; nonterminal  String identifier_list;
@@ -94,18 +164,13 @@ nonterminal String literal_value;
 nonterminal String zero_one_expression;
 nonterminal String SEMI_COLON; nonterminal String zero_one_semi;
 nonterminal String zero_more_var_spec;
-nonterminal String function_lit;
 nonterminal String literal_type;
 nonterminal String literal;
-nonterminal String expression;
-nonterminal String method_expr;
 nonterminal String group_function_decl;
 nonterminal String function_body;
 nonterminal String zero_more_statment;
-nonterminal String method_name;
 nonterminal String zero_more_parameter_list;
 nonterminal String method_decl;
-nonterminal String short_var_decl;
 nonterminal String var_decl;
 nonterminal String function_decl;
 nonterminal String group_var_decl;
@@ -120,6 +185,7 @@ nonterminal String element_type;
 start with package_list;
 
 /* Precedences */
+
 
 package_list ::=  PACKAGE IDENTIFIER;
 
@@ -229,153 +295,6 @@ literal_type ::= struct_type|array_type| OPEN_SQUARE DOTS CLOSE_SQUARE element_t
 
 literal_value ::= OPEN_CURLY zero_one_element_list CLOSE_CURLY;
 zero_one_element_list::= element_list| ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-terminal String Const;
-terminal String EQUAL;
-terminal String PLUS;
-terminal String INCREMENT;
-terminal String DECREMENT;
-terminal String MINUS;
-terminal String VAR;
-terminal String IF;
-terminal String BREAK;
-terminal String FUNC;
-terminal String ASTRISK;
-terminal String COLON_EQUAL;
-terminal String PERCENT;
-terminal String COMMENT;
-terminal String AND_OP;
-terminal String REL_OP;
-terminal String RETURN;
-terminal String SEMI_COLON;
-terminal String OPEN_PARAN;
-terminal String CLOSE_PARAN;
-terminal String OPEN_SQUARE;
-terminal String CLOSE_SQUARE;
-terminal String GREATER_EQUAL;
-terminal String SINGLE_OR;
-terminal String STRING_TEXT;
-terminal String OPEN_CURLY;
-terminal String CLOSE_CURLY;
-terminal String COMMA;
-terminal String TYPE;
-terminal String INT_LIT;
-terminal String SMALLER;
-terminal String GREATER;
-terminal String EQUAL_EQUAL;
-terminal String LESS_EQUAL;
-terminal String SLASH;
-terminal String SWITCH;
-terminal String CASE;
-terminal String DEFAULT;
-terminal String FOR;
-terminal String STRUCT;
-terminal String OR_OPR;
-terminal String IMPORT;
-terminal String IDENTIFIER;
-terminal String PACKAGE;
-terminal String DOT;
-terminal String COLON;
-terminal String ELSE;
-/* Non terminals */
-non terminal  String   element_list;
-non terminal  String   sub_element_list;
-non terminal  String   keyed_element;
-non terminal  String   sub_keyed_element;
-non terminal  String   key;
-non terminal  String   element;
-non terminal  String   field_name;
-non terminal  String   literal_value;
-non terminal  String   expression;
-non terminal  String   basic_lit;
-non terminal  String   operand_name;
-non terminal  String   qualified_ident;
-non terminal  String   package_name;
-non terminal  String   function;
-non terminal  String   primary_expr;
-non terminal  String   operand;
-non terminal  String   selector;
-non terminal  String   index;
-non terminal  String   slice;
-non terminal  String   sub_slice;
-non terminal  String   arguments;
-non terminal  String   sub_arguments;
-non terminal  String   sub_sub_arguments;
-non terminal  String   sub_type;
-non terminal  String   sub_sub_type;
-non terminal  String   function_lit;
-non terminal  String   expression_list;
-non terminal  String   type;
-non terminal  String   method_expr;
-non terminal  String   receiver_type;
-non terminal  String   method_name;
-non terminal  String   type_name;
-non terminal  String   statement;
-non terminal  String   sub_semi_colon;
-non terminal  String   simple_stmt;
-non terminal  String   expression_stmt;
-non terminal  String   inc_dec_stmt;
-non terminal  String   sub_inc_dec_stmt;
-non terminal  String   assignment;
-non terminal  String   assign_op;
-non terminal  String   sub_assign_op;
-non terminal  String   if_stmt;
-non terminal  String   sub_if_stmt;
-non terminal  String   sub_else_stmt;
-non terminal  String   sub_sub_else_stmt;
-non terminal  String   switch_stmt;
-non terminal  String   declaration;
-non terminal  String   return_stmt;
-non terminal  String   break_stmt;
-non terminal  String   block;
-non terminal  String   for_stmt;
-non terminal  String   short_var_decl;
-non terminal  String   add_op;
-non terminal  String   mul_op;
-non terminal  String   expr_switch_stmt;
-non terminal  String   sub_expr_switch_stmt;
-non terminal  String   sub_expr_switch_expr_stmt;
-non terminal  String   zero_expr_switch_stmt;
-non terminal  String   expr_case_clause;
-non terminal  String   expr_switch_case;
-non terminal  String   statement_list;
-non terminal  String   sub_for_stmt;
-non terminal  String   condition;
-non terminal  String   for_clause;
-non terminal  String   sub_init_stmt;
-non terminal  String   sub_condition;
-non terminal  String   sub_post_stmt;
-non terminal  String   init_stmt;
-non terminal  String   post_stmt;
-non terminal  String   sub_return_stmt;
-non terminal  String   package_clause;
-non terminal  String   sub_import_decl;
-non terminal  String   sub_top_level_decl;
-non terminal  String   import_decl;
-non terminal  String   top_level_decl;
-non terminal  String   source_file;
-non terminal  String   import_spec;
-non terminal  String   sub_import_spec;
-non terminal  String   sub_sub_import_decl;
-non terminal  String   sub_import_decll;
-non terminal  String   import_path;
-
 /* Precedences */
 
 element_list ::=  keyed_element sub_element_list;
@@ -444,7 +363,6 @@ sub_sub_import_decl ::= import_spec sub_semi_colon sub_sub_import_decl|;
 import_spec ::= sub_import_spec import_path;
 sub_import_spec ::= DOT|package_name|;
 import_path ::= STRING_TEXT;
->>>>>>> d3dbd3ac1ab02f26565226c065d72dfd8997a508
 
 
 
