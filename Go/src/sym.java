@@ -42,6 +42,7 @@ public class sym {
   public static final int error = 1;
   public static final int INFER = 47;
   public static final int PERCENT = 34;
+  public static final int SEMI_COLON = 56;
   public static final int BREAK = 50;
   public static final int CLOSE_PARAN = 44;
   public static final int SWITCH = 16;
@@ -118,7 +119,8 @@ public class sym {
   "SMALLER",
   "GREATER",
   "EQUAL_EQUAL",
-  "LESS_EQUAL"
+  "LESS_EQUAL",
+  "SEMI_COLON"
   };
 }
 

@@ -10,8 +10,8 @@ public class AP {
 
 	public static void main(String[] args) {
 
-		String inFile = "/Users/maggiemoheb/Desktop/GUC/10th semester/Advanced Lab/Project/Milestone2/CUPS/Go/MS2/Go1.in";
-		String outFile = "/Users/maggiemoheb/Desktop/GUC/10th semester/Advanced Lab/Project/Milestone2/CUPS/Go/MS2/Go11.out";
+		String inFile = "../Go/MS2/Go3.in";
+		String outFile = "../Go/MS2/Go11.out";
 		if (args.length > 1) {
 			inFile = args[0];
 		}

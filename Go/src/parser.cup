@@ -6,7 +6,7 @@ import java_cup.runtime.*;
 terminal String CONST, INCREMENT, VAR,
 IF, COLON_EQUAL, 
 ELSE, COMMENT, REL_OP, RETURN, 
- DOT, COMMA, TYPE, INT_LIT,
+DOT, COMMA, TYPE, INT_LIT,
 SLASH, SWITCH, CASE, DEFAULT, FOR, STRUCT, PACKAGE,
 IMPORT;
 terminal String EQUAL;
@@ -42,6 +42,7 @@ terminal String SMALLER;
 terminal String GREATER;
 terminal String EQUAL_EQUAL;
 terminal String LESS_EQUAL;
+terminal String SEMI_COLON;
 /* Non terminals */
 non terminal  String   sub_element_list;
 non terminal  String   keyed_element;
@@ -125,18 +126,18 @@ nonterminal String type_spec;
 nonterminal String zero_more_group_type_decl;
 nonterminal String primary_expr;
 nonterminal String var_spec;
- nonterminal  String binary_op;
- nonterminal  String rel_op;
- nonterminal  String add_op; nonterminal  String mul_op;
- nonterminal  String type; nonterminal  String type_name; nonterminal  String type_lit; nonterminal  String array_type;
- nonterminal  String array_length;
- nonterminal String signature;
- nonterminal String basic_lit;
- nonterminal  String slice_type;
- nonterminal  String struct_type;
- nonterminal  String zero_one_astrisk;
- nonterminal String composite_lit;
- nonterminal String function;
+nonterminal  String binary_op;
+nonterminal  String rel_op;
+nonterminal  String add_op; nonterminal  String mul_op;
+nonterminal  String type; nonterminal  String type_name; nonterminal  String type_lit; nonterminal  String array_type;
+nonterminal  String array_length;
+nonterminal String signature;
+nonterminal String basic_lit;
+nonterminal  String slice_type;
+nonterminal  String struct_type;
+nonterminal  String zero_one_astrisk;
+nonterminal String composite_lit;
+nonterminal String function;
 nonterminal String receiver;
 nonterminal String operand;
 nonterminal String operand_name;
@@ -162,7 +163,7 @@ nonterminal  String group_field_decl; nonterminal  String anonymous_field; nonte
 nonterminal String zero_one_element_list;
 nonterminal String literal_value;
 nonterminal String zero_one_expression;
-nonterminal String SEMI_COLON; nonterminal String zero_one_semi;
+nonterminal String zero_one_semi;
 nonterminal String zero_more_var_spec;
 nonterminal String literal_type;
 nonterminal String literal;
