@@ -1,0 +1,45 @@
+/* Simple +/-/* expression language; parser evaluates constant expressions on the fly*/
+import java_cup.runtime.*;
+
+parser code {:
+    // Connect this parser to a scanner!
+    Lexer s;
+    parser(Lexer s){ this.s=s; }
+:}
+
+/* define how to connect to the scanner! */
+init with {::};
+scan with {: Symbol x = s.next_token(); System.out.println(x);  return x;  :};
+
+/* Terminals (tokens returned by the scanner). */
+/* Terminals (tokens returned by the scanner). */
+terminal  BREAKLINE, SPACE, CONST, EQUAL, PLUS, INCREMENT, MINUS, VAR,
+IF, FUNC, ASTRISK, COLON_EQUAL, 
+ELSE, PERCENT, COMMENT, AND_OP, REL_OP, RETURN, COLON, SEMI_COLON,
+OPEN_PARAN, CLOSE_PARAN, OPEN_SQUARE, CLOSE_SQUARE, IDENTIFIER, GREATER_EQUAL, SINGLE_OR,
+STRING_TEXT, OPEN_CURLY, CLOSE_CURLY, DOT, COMMA, TYPE, INT_LIT, SMALLER, GREATER, EQUAL_EQUAL, LESS_EQUAL,
+SLASH, SWITCH, CASE, DEFAULT, FOR, STRUCT, OR_OPR;
+
+/* Non terminals */
+non terminal            binary_op;
+non terminal Integer    rel_opr, add_opr;      // used to store evaluated subexpressions
+
+/* Precedences */
+
+
+/* The grammar rules */
+
+binary_op ::= OR_OPR{: System.out.println("||");:}
+			 |AND_OP{: System.out.println("&&");:}
+			 |rel_opr:e {: System.out.println(e);:}
+			 |add_opr:e {: System.out.println(e);:}			 ;
+rel_opr ::=  SMALLER  {: return("<");:}
+			|GREATER {: return(">");:}
+			|EQUAL_EQUAL{: return("==");:}
+			|LESS_EQUAL{:return( "=<");:}
+			|GREATER_EQUAL{:return(">=");:}
+			;		 
+add_opr ::= PLUS {: return("+");:}
+			|MINUS {: return("-");:}
+			|SINGLE_OR{: return("|");:}
+			;

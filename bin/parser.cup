@@ -1,0 +1,49 @@
+/* Simple +/-/* expression language; parser evaluates constant expressions on the fly*/
+import java_cup.runtime.*;
+
+parser code {:
+    // Connect this parser to a scanner!
+    Lexer s;
+    parser(Lexer s){ this.s=s; }
+:}
+
+/* define how to connect to the scanner! */
+init with {: :};
+scan with {: Symbol x = s.next_token(); System.out.println(x);  return x;  :};
+
+/* Terminals (tokens returned by the scanner). */
+/* Terminals (tokens returned by the scanner). */
+terminal  BREAKLINE, SPACE, CONST, EQUAL, PLUS, INCREMENT, MINUS, VAR,
+ IF, FUNC, ASTRISK, COLON_EQUAL, 
+ELSE, PERCENT, COMMENT, AND_OP, REL_OP, RETURN, COLON, SEMI_COLON,
+ OPEN_PARAN, CLOSE_PARAN, OPEN_SQUARE, CLOSE_SQUARE, IDENTIFIER, GREATER_EQUAL,
+ STRING_TEXT, OPEN_CURLY, CLOSE_CURLY, DOT, COMMA, TYPE, INT_LIT, SMALLER, GREATER, EQUAL_EQUAL, LESS_EQUAL,
+  SLASH, SWITCH, CASE, DEFAULT, FOR, STRUCT, OR_OPR;
+terminal Integer    NUMBER;        // our scanner provides numbers as integers
+/* Non terminals */
+non terminal            binary_op;
+non terminal Integer    expr;      // used to store evaluated subexpressions
+
+/* Precedences */
+
+
+/* The grammar rules */
+expr_list ::= expr_list expr:e SEMI         {: System.out.println(e);:}
+            | expr:e SEMI                   {: System.out.println(e);:}
+expr      ::= expr:e1 PLUS  expr:e2         {: RESULT = e1+e2;       :}
+             | expr:e1 MINUS expr:e2        {: RESULT = e1-e2;       :}
+             | expr:e1 TIMES expr:e2        {: RESULT = e1*e2;       :}
+             | MINUS expr:e                 {: RESULT = -e;          :}
+  	     %prec UMINUS
+       | LPAREN expr:e RPAREN	         {: RESULT = e;           :}
+       | NUMBER:n	                     {: RESULT = n;           :}
+
+binary_op ::= OR_OPR{: System.out.println("||");:}
+			 |AND_OPR{: System.out.println("&&");:}
+			 |exp:e rel_opr{: System.out.println(e);:}			 ;
+rel_opr ::= SMALLER {: return;:}
+			|GREATER {: System.out.println("");:}
+			|EQUAL_EQUAL
+			|LESS_EQUAL	
+			|GREATER_EQUAL
+			;		 
