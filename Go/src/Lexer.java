@@ -264,30 +264,30 @@ private static String Quoted ="";
 		/* 42 */ YY_NO_ANCHOR,
 		/* 43 */ YY_NO_ANCHOR,
 		/* 44 */ YY_NO_ANCHOR,
-		/* 45 */ YY_NOT_ACCEPT,
-		/* 46 */ YY_NO_ANCHOR,
+		/* 45 */ YY_NO_ANCHOR,
+		/* 46 */ YY_NOT_ACCEPT,
 		/* 47 */ YY_NO_ANCHOR,
 		/* 48 */ YY_NO_ANCHOR,
 		/* 49 */ YY_NO_ANCHOR,
 		/* 50 */ YY_NO_ANCHOR,
-		/* 51 */ YY_NOT_ACCEPT,
-		/* 52 */ YY_NO_ANCHOR,
-		/* 53 */ YY_NOT_ACCEPT,
-		/* 54 */ YY_NO_ANCHOR,
-		/* 55 */ YY_NOT_ACCEPT,
-		/* 56 */ YY_NO_ANCHOR,
-		/* 57 */ YY_NOT_ACCEPT,
-		/* 58 */ YY_NO_ANCHOR,
-		/* 59 */ YY_NOT_ACCEPT,
-		/* 60 */ YY_NO_ANCHOR,
-		/* 61 */ YY_NOT_ACCEPT,
-		/* 62 */ YY_NO_ANCHOR,
-		/* 63 */ YY_NOT_ACCEPT,
-		/* 64 */ YY_NO_ANCHOR,
-		/* 65 */ YY_NOT_ACCEPT,
-		/* 66 */ YY_NO_ANCHOR,
-		/* 67 */ YY_NOT_ACCEPT,
-		/* 68 */ YY_NO_ANCHOR,
+		/* 51 */ YY_NO_ANCHOR,
+		/* 52 */ YY_NOT_ACCEPT,
+		/* 53 */ YY_NO_ANCHOR,
+		/* 54 */ YY_NOT_ACCEPT,
+		/* 55 */ YY_NO_ANCHOR,
+		/* 56 */ YY_NOT_ACCEPT,
+		/* 57 */ YY_NO_ANCHOR,
+		/* 58 */ YY_NOT_ACCEPT,
+		/* 59 */ YY_NO_ANCHOR,
+		/* 60 */ YY_NOT_ACCEPT,
+		/* 61 */ YY_NO_ANCHOR,
+		/* 62 */ YY_NOT_ACCEPT,
+		/* 63 */ YY_NO_ANCHOR,
+		/* 64 */ YY_NOT_ACCEPT,
+		/* 65 */ YY_NO_ANCHOR,
+		/* 66 */ YY_NOT_ACCEPT,
+		/* 67 */ YY_NO_ANCHOR,
+		/* 68 */ YY_NOT_ACCEPT,
 		/* 69 */ YY_NO_ANCHOR,
 		/* 70 */ YY_NO_ANCHOR,
 		/* 71 */ YY_NO_ANCHOR,
@@ -331,62 +331,62 @@ private static String Quoted ="";
 		/* 109 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"30:8,20:2,21,30:2,40,30:18,20,30,37,30:2,35,34,30,44,47,27,25,36,26,18,29,4" +
-"3:10,33,19,22,24,23,30:2,42:26,45,38,48,30:2,39,2,42,3,15,6,16,5,14,13,42,4" +
-",17,31,28,32,1,42,10,9,7,11,41,12,42,8,42,46,30,49,30:2,0:2")[0];
+"31:8,20:2,21,31:2,39,31:18,20,31,36,31:2,35,34,31,43,46,28,26,22,27,18,30,4" +
+"2:10,23,19,25,24,25,31:2,41:26,44,37,47,31:2,38,2,41,3,15,6,16,5,14,13,41,4" +
+",17,33,29,32,1,41,10,9,7,11,40,12,41,8,41,45,31,48,31:2,0:2")[0];
 
 	private int yy_rmap[] = unpackFromString(1,110,
-"0,1,2,3,1:3,4,5,1:2,6,1,7,1:2,8,9,10,1:6,11,1,12,1:4,11:5,1,11:7,13,14,15,1" +
-"6,17,18,17,19,20,21,18,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,3" +
-"9,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,6" +
-"4,65,66,67,68,69,70,71,72,11:2,73")[0];
+"0,1,2,3,1:3,4,5:2,6,1:2,7,1:2,8,9,10,1:6,11,1:2,12,1,11,1:2,11:5,1,11:7,13," +
+"14,1,15,16,17,16,18,19,20,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,3" +
+"6,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,6" +
+"1,62,63,64,65,66,67,68,69,70,71,11,72")[0];
 
-	private int yy_nxt[][] = unpackFromString(74,50,
-"1,2,108,85,108:2,86,87,108,102,103,108:2,46,108,109,88,108,3,4,5:2,6,47,7,8" +
-",9,10,108,11,12,108:2,13,48,14,15,16,12,17,-1,73,108,18,19,20,21,22,23,24,-" +
-"1:51,108,104,108:15,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:24,45,-1:53,6,-1," +
-"6,-1:50,26,-1:53,27,-1:44,28,-1:26,51:20,-1,51:15,-1,53,-1,51:10,-1,55:20,-" +
-"1,55:15,-1,57,-1,55:10,-1:43,18,-1:7,108:17,-1:10,108,-1:2,108:2,-1:8,108:2" +
-",52,-1:7,27:20,-1,27:18,-1,27:9,-1:18,59,-1:32,108:15,25,108,-1:10,108,-1:2" +
-",99,108,-1:8,108:2,52,-1:30,6,-1:59,29,-1:16,51:20,-1,51:15,30,53,-1,51:10," +
-"-1,55:20,-1,55:15,-1,57,31,55:10,-1:43,52,-1:7,51:19,61,63,51:15,49,53,51:1" +
-"1,-1,108:9,32,108:7,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:5,33,108:11" +
-",-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,55:19,65,67,55:16,57,50,55:10,-1,1" +
-"08:5,34,108:11,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:25,37,-1:31,108:5,35,1" +
-"08:11,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,51:19,61,63,51:15,30,53,-1,51" +
-":10,-1,108:2,36,108:14,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:26,63:2,-1:16," +
-"51,-1:12,108:6,38,108:10,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,55:19,65,6" +
-"7,55:15,-1,57,31,55:10,-1,108:6,39,108:10,-1:10,108,-1:2,108:2,-1:8,108:2,5" +
-"2,-1:26,67:2,-1:16,55,-1:12,108:13,40,108:3,-1:10,108,-1:2,108:2,-1:8,108:2" +
-",52,-1:7,108:17,-1:10,41,-1:2,108:2,-1:8,108:2,52,-1:7,108:6,42,108:10,-1:1" +
-"0,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:5,43,108:11,-1:10,108,-1:2,108:2,-1" +
-":8,108:2,52,-1:7,108:6,44,108:10,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,10" +
-"8,54,108:15,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:8,56,108:8,-1:10,10" +
-"8,-1:2,108:2,-1:8,108:2,52,-1:7,108:8,58,108:8,-1:10,108,-1:2,108:2,-1:8,10" +
-"8:2,52,-1:7,60,108:16,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:17,-1:10," +
-"62,-1:2,108:2,-1:8,108:2,52,-1:7,108:8,64,108:8,-1:10,108,-1:2,108:2,-1:8,1" +
-"08:2,52,-1:7,108:2,66,108:14,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:2," +
-"68,108:14,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:9,69,108:7,-1:10,108," +
-"-1:2,108:2,-1:8,108:2,52,-1:7,108:9,70,108:7,-1:10,108,-1:2,108:2,-1:8,108:" +
-"2,52,-1:7,108:4,71,108:12,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:16,72" +
-",-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108,74,108:15,-1:10,108,-1:2,108,8" +
-"9,-1:8,108:2,52,-1:7,108:16,75,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:" +
-"7,76,108:9,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:10,77,108:6,-1:10,10" +
-"8,-1:2,108,106,-1:8,108:2,52,-1:7,108:17,-1:10,78,-1:2,108:2,-1:8,108:2,52," +
-"-1:7,108:10,79,108:6,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:6,80,108:1" +
-"0,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:10,81,108:6,-1:10,108,-1:2,10" +
-"8:2,-1:8,108:2,52,-1:7,108:17,-1:10,108,-1:2,108,82,-1:8,108:2,52,-1:7,108," +
-"83,108:15,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:10,84,108:6,-1:10,108" +
-",-1:2,108:2,-1:8,108:2,52,-1:7,108:9,90,108:7,-1:10,108,-1:2,108:2,-1:8,108" +
-":2,52,-1:7,108:12,91,108:4,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:6,92" +
-",108:10,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,93,108:16,-1:10,108,-1:2,10" +
-"8:2,-1:8,108:2,52,-1:7,108:3,94,108:13,-1:10,108,-1:2,108:2,-1:8,108:2,52,-" +
-"1:7,108,95,108:15,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:6,96,108:4,97" +
-",108:5,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:5,98,108:11,-1:10,108,-1" +
-":2,108:2,-1:8,108:2,52,-1:7,108:2,100,108:14,-1:10,108,-1:2,108:2,-1:8,108:" +
-"2,52,-1:7,108:15,101,108,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:9,107," +
-"108:7,-1:10,108,-1:2,108:2,-1:8,108:2,52,-1:7,108:5,105,108:11,-1:10,108,-1" +
-":2,108:2,-1:8,108:2,52,-1:6");
+	private int yy_nxt[][] = unpackFromString(73,49,
+"1,2,108,88,108:2,89,90,108,104,105,108:2,47,108,109,75,108,3,4,5:2,6,7,8,9," +
+"10,11,12,108,13,14,108:2,49,15,16,14,17,-1,76,108,18,19,20,21,22,23,24,-1:5" +
+"0,108,106,108:15,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:24,46,-1:54,26,-1:48" +
+",48,-1:50,27,-1:52,28,-1:19,52:20,-1,52:14,-1,54,-1,52:10,-1,56:20,-1,56:14" +
+",-1,58,-1,56:10,-1:42,18,-1:7,108:17,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:" +
+"7,28:20,-1,28:17,-1,28:9,-1:18,60,-1:31,108:15,25,108,-1:11,108,-1:2,108,10" +
+"1,-1:6,108:2,53,-1:40,29,-1:15,52:20,-1,52:14,31,54,-1,52:10,-1,56:20,-1,56" +
+":14,-1,58,32,56:10,-1:42,53,-1:7,52:19,62,64,52:14,50,54,52:11,-1,108:9,30," +
+"108:7,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:9,33,108:7,-1:11,108,-1:2" +
+",108:2,-1:6,108:2,53,-1:7,56:19,66,68,56:15,58,51,56:10,-1,108:5,34,108:11," +
+"-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:25,38,-1:30,108:5,35,108:11,-1:11,108" +
+",-1:2,108:2,-1:6,108:2,53,-1:7,52:19,62,64,52:14,31,54,-1,52:10,-1,108:5,36" +
+",108:11,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:26,64:2,-1:15,52,-1:12,108:2," +
+"37,108:14,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,56:19,66,68,56:14,-1,58,3" +
+"2,56:10,-1,108:6,39,108:10,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:26,68:2,-1" +
+":15,56,-1:12,108:6,40,108:10,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:13" +
+",41,108:3,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:17,-1:11,42,-1:2,108:" +
+"2,-1:6,108:2,53,-1:7,108:6,43,108:10,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:" +
+"7,108:5,44,108:11,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:6,45,108:10,-" +
+"1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:10,80,108:6,-1:11,108,-1:2,55,10" +
+"8,-1:6,108:2,53,-1:7,108,57,108:15,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7," +
+"108:8,59,108:8,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:8,61,108:8,-1:11" +
+",108,-1:2,108:2,-1:6,108:2,53,-1:7,63,108:16,-1:11,108,-1:2,108:2,-1:6,108:" +
+"2,53,-1:7,108:17,-1:11,65,-1:2,108:2,-1:6,108:2,53,-1:7,108:8,67,108:8,-1:1" +
+"1,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:2,69,108:14,-1:11,108,-1:2,108:2,-1" +
+":6,108:2,53,-1:7,108:2,70,108:14,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,10" +
+"8:9,71,108:7,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:9,72,108:7,-1:11,1" +
+"08,-1:2,108:2,-1:6,108:2,53,-1:7,108:4,73,108:12,-1:11,108,-1:2,108:2,-1:6," +
+"108:2,53,-1:7,108:16,74,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108,77,108:" +
+"15,-1:11,108,-1:2,91,108,-1:6,108:2,53,-1:7,108:16,78,-1:11,108,-1:2,108:2," +
+"-1:6,108:2,53,-1:7,108:7,79,108:9,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,1" +
+"08:17,-1:11,81,-1:2,108:2,-1:6,108:2,53,-1:7,108:10,82,108:6,-1:11,108,-1:2" +
+",108:2,-1:6,108:2,53,-1:7,108:6,83,108:10,-1:11,108,-1:2,108:2,-1:6,108:2,5" +
+"3,-1:7,108:10,84,108:6,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:17,-1:11" +
+",108,-1:2,85,108,-1:6,108:2,53,-1:7,108,86,108:15,-1:11,108,-1:2,108:2,-1:6" +
+",108:2,53,-1:7,108:10,87,108:6,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:" +
+"9,92,108:7,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:12,93,108:4,-1:11,10" +
+"8,-1:2,108:2,-1:6,108:2,53,-1:7,108:6,94,108:10,-1:11,108,-1:2,108:2,-1:6,1" +
+"08:2,53,-1:7,95,108:16,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:3,96,108" +
+":13,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108,97,108:15,-1:11,108,-1:2,10" +
+"8:2,-1:6,108:2,53,-1:7,108:6,98,108:4,99,108:5,-1:11,108,-1:2,108:2,-1:6,10" +
+"8:2,53,-1:7,108:5,100,108:11,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:2," +
+"102,108:14,-1:11,108,-1:2,108:2,-1:6,108:2,53,-1:7,108:15,103,108,-1:11,108" +
+",-1:2,108:2,-1:6,108:2,53,-1:7,108:5,107,108:11,-1:11,108,-1:2,108:2,-1:6,1" +
+"08:2,53,-1:6");
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -466,45 +466,45 @@ private static String Quoted ="";
 					case -6:
 						break;
 					case 6:
-						{ return (new Symbol(sym.REL_OP,yytext()));}
+						{ return (new Symbol(sym.COMMA,yytext()));}
 					case -7:
 						break;
 					case 7:
-						{ return (new Symbol(sym.EQUAL,yytext()));}
+						{ return (new Symbol(sym.COLON,yytext()));}
 					case -8:
 						break;
 					case 8:
-						{ return (new Symbol(sym.PLUS,yytext()));}
+						{ return (new Symbol(sym.EQUAL,yytext()));}
 					case -9:
 						break;
 					case 9:
-						{ return (new Symbol(sym.MINUS,yytext()));}
+						{ return (new Symbol(sym.REL_OP,yytext()));}
 					case -10:
 						break;
 					case 10:
-						{ return (new Symbol(sym.ASTRISK,yytext()));}
+						{ return (new Symbol(sym.PLUS,yytext()));}
 					case -11:
 						break;
 					case 11:
-						{ return (new Symbol(sym.SLASH,yytext()));}
+						{ return (new Symbol(sym.MINUS,yytext()));}
 					case -12:
 						break;
 					case 12:
-						{
-  return new Symbol(sym.error, "Invalid input: " + yytext());
-}
+						{ return (new Symbol(sym.ASTRISK,yytext()));}
 					case -13:
 						break;
 					case 13:
-						{ return (new Symbol(sym.COLON,yytext()));}
+						{ return (new Symbol(sym.SLASH,yytext()));}
 					case -14:
 						break;
 					case 14:
-						{ return (new Symbol(sym.PERCENT,yytext()));}
+						{
+  return new Symbol(sym.error, "Invalid input: " + yytext());
+}
 					case -15:
 						break;
 					case 15:
-						{ return (new Symbol(sym.COMMA,yytext()));}
+						{ return (new Symbol(sym.PERCENT,yytext()));}
 					case -16:
 						break;
 					case 16:
@@ -593,15 +593,15 @@ return (new Symbol(sym.error, "Invalid input: "+ yytext()  +" in line: "+yyline)
 					case -26:
 						break;
 					case 26:
-						{ return (new Symbol(sym.INCREMENT,yytext()));}
+						{ return (new Symbol(sym.COLON_EQUAL,yytext()));}
 					case -27:
 						break;
 					case 27:
-						{}
+						{ return (new Symbol(sym.INCREMENT,yytext()));}
 					case -28:
 						break;
 					case 28:
-						{ return (new Symbol(sym.COLON_EQUAL,yytext()));}
+						{}
 					case -29:
 						break;
 					case 29:
@@ -609,13 +609,7 @@ return (new Symbol(sym.error, "Invalid input: "+ yytext()  +" in line: "+yyline)
 					case -30:
 						break;
 					case 30:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Symbol(sym.STRING_TEXT, yytext()));
-	else
-return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
-}
+						{ return (new Symbol(sym.FOR,yytext()));}
 					case -31:
 						break;
 					case 31:
@@ -624,83 +618,83 @@ return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+
 	if(str.length() == yytext().length() - 2)
 	return (new Symbol(sym.STRING_TEXT, yytext()));
 	else
-	return (new Symbol(sym.error, "STRING ERROR"));
+return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
 }
 					case -32:
 						break;
 					case 32:
-						{ return (new Symbol(sym.VAR,yytext()));}
-					case -33:
-						break;
-					case 33:
-						{ return (new Symbol(sym.CASE,yytext()));}
-					case -34:
-						break;
-					case 34:
-						{ return (new Symbol(sym.ELSE,yytext()));}
-					case -35:
-						break;
-					case 35:
-						{ return (new Symbol(sym.TYPE,yytext()));}
-					case -36:
-						break;
-					case 36:
-						{ return (new Symbol(sym.FUNC,yytext()));}
-					case -37:
-						break;
-					case 37:
-						{ return (new Symbol(sym.DOTS,yytext()));}
-					case -38:
-						break;
-					case 38:
-						{ return (new Symbol(sym.CONST,yytext()));}
-					case -39:
-						break;
-					case 39:
-						{ return (new Symbol(sym.STRUCT,yytext()));}
-					case -40:
-						break;
-					case 40:
-						{ return (new Symbol(sym.SWITCH,yytext()));}
-					case -41:
-						break;
-					case 41:
-						{ return (new Symbol(sym.RETURN,yytext()));}
-					case -42:
-						break;
-					case 42:
-						{ return (new Symbol(sym.IMPORT,yytext()));}
-					case -43:
-						break;
-					case 43:
-						{ return (new Symbol(sym.PACKAGE,yytext()));}
-					case -44:
-						break;
-					case 44:
-						{ return (new Symbol(sym.DEFAULT,yytext()));}
-					case -45:
-						break;
-					case 46:
-						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
-					case -46:
-						break;
-					case 47:
-						{ return (new Symbol(sym.REL_OP,yytext()));}
-					case -47:
-						break;
-					case 48:
-						{
-  return new Symbol(sym.error, "Invalid input: " + yytext());
-}
-					case -48:
-						break;
-					case 49:
 						{
 	String str =  yytext().substring(1,yytext().length() - 1);
 	if(str.length() == yytext().length() - 2)
 	return (new Symbol(sym.STRING_TEXT, yytext()));
 	else
-return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
+	return (new Symbol(sym.error, "STRING ERROR"));
+}
+					case -33:
+						break;
+					case 33:
+						{ return (new Symbol(sym.VAR,yytext()));}
+					case -34:
+						break;
+					case 34:
+						{ return (new Symbol(sym.CASE,yytext()));}
+					case -35:
+						break;
+					case 35:
+						{ return (new Symbol(sym.ELSE,yytext()));}
+					case -36:
+						break;
+					case 36:
+						{ return (new Symbol(sym.TYPE,yytext()));}
+					case -37:
+						break;
+					case 37:
+						{ return (new Symbol(sym.FUNC,yytext()));}
+					case -38:
+						break;
+					case 38:
+						{ return (new Symbol(sym.DOTS,yytext()));}
+					case -39:
+						break;
+					case 39:
+						{ return (new Symbol(sym.CONST,yytext()));}
+					case -40:
+						break;
+					case 40:
+						{ return (new Symbol(sym.STRUCT,yytext()));}
+					case -41:
+						break;
+					case 41:
+						{ return (new Symbol(sym.SWITCH,yytext()));}
+					case -42:
+						break;
+					case 42:
+						{ return (new Symbol(sym.RETURN,yytext()));}
+					case -43:
+						break;
+					case 43:
+						{ return (new Symbol(sym.IMPORT,yytext()));}
+					case -44:
+						break;
+					case 44:
+						{ return (new Symbol(sym.PACKAGE,yytext()));}
+					case -45:
+						break;
+					case 45:
+						{ return (new Symbol(sym.DEFAULT,yytext()));}
+					case -46:
+						break;
+					case 47:
+						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
+					case -47:
+						break;
+					case 48:
+						{ return (new Symbol(sym.REL_OP,yytext()));}
+					case -48:
+						break;
+					case 49:
+						{
+  return new Symbol(sym.error, "Invalid input: " + yytext());
 }
 					case -49:
 						break;
@@ -710,43 +704,49 @@ return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+
 	if(str.length() == yytext().length() - 2)
 	return (new Symbol(sym.STRING_TEXT, yytext()));
 	else
-	return (new Symbol(sym.error, "STRING ERROR"));
+return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
 }
 					case -50:
 						break;
-					case 52:
-						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
+					case 51:
+						{
+	String str =  yytext().substring(1,yytext().length() - 1);
+	if(str.length() == yytext().length() - 2)
+	return (new Symbol(sym.STRING_TEXT, yytext()));
+	else
+	return (new Symbol(sym.error, "STRING ERROR"));
+}
 					case -51:
 						break;
-					case 54:
+					case 53:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -52:
 						break;
-					case 56:
+					case 55:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -53:
 						break;
-					case 58:
+					case 57:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -54:
 						break;
-					case 60:
+					case 59:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -55:
 						break;
-					case 62:
+					case 61:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -56:
 						break;
-					case 64:
+					case 63:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -57:
 						break;
-					case 66:
+					case 65:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -58:
 						break;
-					case 68:
+					case 67:
 						{ return (new Symbol(sym.IDENTIFIER,yytext()));}
 					case -59:
 						break;

@@ -42,7 +42,7 @@ VAR=var
 BREAK=break
 IF =if
 ASTRISK =\*
-COLON_EQUAL = \:\=
+COLON_EQUAL=(:=)
 ELSE =else
 PERCENT =\%
 SHIFTLEFT=\<\<
@@ -50,7 +50,7 @@ SHIFTRIGHT=\>\>
 COMMENT =\//(.)*
 AND_OP =\&&
 SINGLE_AND =\&
-REL_OP = \<|\>|(==)|(=<)|(>=)
+REL_OP = (<|>|==|<=|>=)
 RETURN =return
 COLON = \:
 DOTS = \.\.\.;
@@ -105,23 +105,27 @@ STRUCT =struct
 <YYINITIAL> {DOTS} { return (new Symbol(sym.DOTS,yytext()));}
 <YYINITIAL> {SPACE} {}
 <YYINITIAL> {BREAKLINE} {Quote_count = 0;}
+<YYINITIAL> {COMMA} { return (new Symbol(sym.COMMA,yytext()));}
+<YYINITIAL> {COLON_EQUAL} { return (new Symbol(sym.COLON_EQUAL,yytext()));}
+
 <YYINITIAL> {REL_OP} { return (new Symbol(sym.REL_OP,yytext()));}
 <YYINITIAL> {PLUS} { return (new Symbol(sym.PLUS,yytext()));}
 <YYINITIAL> {MINUS} { return (new Symbol(sym.MINUS,yytext()));}
 <YYINITIAL> {ASTRISK} { return (new Symbol(sym.ASTRISK,yytext()));}
 <YYINITIAL> {RETURN} { return (new Symbol(sym.RETURN,yytext()));}
 <YYINITIAL> {COMMENT} {}
+<YYINITIAL> {EQUAL} { return (new Symbol(sym.EQUAL,yytext()));}
+<YYINITIAL> {FOR} { return (new Symbol(sym.FOR,yytext()));}
 
 <YYINITIAL> {IMPORT} { return (new Symbol(sym.IMPORT,yytext()));}
 <YYINITIAL> {ELSE} { return (new Symbol(sym.ELSE,yytext()));}
 <YYINITIAL> {IF} { return (new Symbol(sym.IF,yytext()));}
 <YYINITIAL> {COLON} { return (new Symbol(sym.COLON,yytext()));}
-<YYINITIAL> {COLON_EQUAL} { return (new Symbol(sym.COLON_EQUAL,yytext()));}
 <YYINITIAL> {SEMI_COLON} { return (new Symbol(sym.SEMI_COLON,yytext()));}
 <YYINITIAL> {AND_OP} { return (new Symbol(sym.AND_OP,yytext()));}
 <YYINITIAL> {PERCENT} { return (new Symbol(sym.PERCENT,yytext()));}
 <YYINITIAL> {FUNC} { return (new Symbol(sym.FUNC,yytext()));}
-<YYINITIAL> {COMMA} { return (new Symbol(sym.COMMA,yytext()));}
+<YYINITIAL> {CONST} { return (new Symbol(sym.CONST,yytext()));}
 
 <YYINITIAL> {INCREMENT} { return (new Symbol(sym.INCREMENT,yytext()));}
 
@@ -156,9 +160,7 @@ return (new Symbol(sym.error, "Invalid input:  "+yytext()  +" in line "+(yyline+
 
 return (new Symbol(sym.error, "Invalid input: "+ yytext()  +" in line: "+yyline));
 }
-<YYINITIAL> {CONST} { return (new Symbol(sym.CONST,yytext()));}
 
-<YYINITIAL> {EQUAL} { return (new Symbol(sym.EQUAL,yytext()));}
 <YYINITIAL> {VAR} { return (new Symbol(sym.VAR,yytext()));}
 <YYINITIAL> {IDENTIFIER} { return (new Symbol(sym.IDENTIFIER,yytext()));}
 <YYINITIAL> {OPEN_PARAN} { stack_char.push('('); return (new Symbol(sym.OPEN_PARAN,yytext()));}
@@ -211,8 +213,6 @@ return (new Symbol(sym.error, "Invalid input: "+ yytext()  +" in line: "+yyline)
 <YYINITIAL> {DOT} { return (new Symbol(sym.DOT,yytext()));}
 <YYINITIAL> {INT_LIT} { return (new Symbol(sym.INT_LIT,yytext()));}
 <YYINITIAL> {SLASH} { return (new Symbol(sym.SLASH,yytext()));}
-<YYINITIAL> {FOR} { return (new Symbol(sym.FOR,yytext()));}
-
 <YYINITIAL> {IDENTIFIER} { return (new Symbol(sym.IDENTIFIER,yytext()));}
 <YYINITIAL> . {
   return new Symbol(sym.error, "Invalid input: " + yytext());
