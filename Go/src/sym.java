@@ -7,29 +7,25 @@
 public class sym {
   /* terminals */
   public static final int REL_OP = 9;
-  public static final int DIVIDE = 33;
-  public static final int STRING_TEXT = 38;
-  public static final int SHIFTRIGHT = 36;
+  public static final int STRING_TEXT = 37;
+  public static final int SHIFTRIGHT = 35;
   public static final int INCREMENT = 3;
   public static final int CONST = 2;
   public static final int SLASH = 15;
   public static final int COMMENT = 8;
   public static final int CASE = 17;
-  public static final int SMALLER = 52;
-  public static final int GREATER = 53;
   public static final int OR_OPR = 26;
-  public static final int CLOSE_SQUARE = 42;
-  public static final int DECREMENT = 49;
-  public static final int SINGLE_AND = 37;
+  public static final int CLOSE_SQUARE = 41;
+  public static final int DECREMENT = 47;
+  public static final int SINGLE_AND = 36;
   public static final int FOR = 19;
   public static final int MINUS = 30;
   public static final int TYPE = 13;
-  public static final int OPEN_PARAN = 41;
+  public static final int OPEN_PARAN = 40;
   public static final int ASTRISK = 32;
   public static final int COMMA = 12;
-  public static final int LESS_EQUAL = 55;
-  public static final int OPEN_SQUARE = 39;
-  public static final int OPEN_CURLY = 40;
+  public static final int OPEN_SQUARE = 38;
+  public static final int OPEN_CURLY = 39;
   public static final int PLUS = 29;
   public static final int IF = 5;
   public static final int DOT = 11;
@@ -38,30 +34,27 @@ public class sym {
   public static final int EOF = 0;
   public static final int RETURN = 10;
   public static final int EQUAL = 23;
-  public static final int GREATER_EQUAL = 51;
   public static final int error = 1;
-  public static final int INFER = 47;
-  public static final int PERCENT = 34;
-  public static final int SEMI_COLON = 56;
-  public static final int BREAK = 50;
-  public static final int CLOSE_PARAN = 44;
+  public static final int INFER = 46;
+  public static final int PERCENT = 33;
+  public static final int SEMI_COLON = 49;
+  public static final int BREAK = 48;
+  public static final int CLOSE_PARAN = 43;
   public static final int SWITCH = 16;
   public static final int IMPORT = 22;
   public static final int COLON = 24;
-  public static final int CLOSE_CURLY = 43;
+  public static final int CLOSE_CURLY = 42;
   public static final int ELSE = 7;
-  public static final int FUNC = 45;
-  public static final int Const = 48;
+  public static final int FUNC = 44;
   public static final int PACKAGE = 21;
-  public static final int SHIFTLEFT = 35;
   public static final int DEFAULT = 18;
+  public static final int SHIFTLEFT = 34;
   public static final int SINGLE_OR = 31;
-  public static final int EXLIM = 46;
+  public static final int EXLIM = 45;
   public static final int STRUCT = 20;
   public static final int INT_LIT = 14;
   public static final int VAR = 4;
   public static final int COLON_EQUAL = 6;
-  public static final int EQUAL_EQUAL = 54;
   public static final int IDENTIFIER = 25;
   public static final String[] terminalNames = new String[] {
   "EOF",
@@ -97,7 +90,6 @@ public class sym {
   "MINUS",
   "SINGLE_OR",
   "ASTRISK",
-  "DIVIDE",
   "PERCENT",
   "SHIFTLEFT",
   "SHIFTRIGHT",
@@ -112,14 +104,8 @@ public class sym {
   "FUNC",
   "EXLIM",
   "INFER",
-  "Const",
   "DECREMENT",
   "BREAK",
-  "GREATER_EQUAL",
-  "SMALLER",
-  "GREATER",
-  "EQUAL_EQUAL",
-  "LESS_EQUAL",
   "SEMI_COLON"
   };
 }

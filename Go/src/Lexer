@@ -33,33 +33,27 @@ BREAKLINE =\n
 SPACE =[\n\ \t\b\012]
 FUNC=func
 CONST=const
-EQUAL=[\=]
+EQUAL=\=
 PLUS =[+]
-INCREMENT =\++
-DECREMENT =--
+INCREMENT =\+\+
+DECREMENT =\-\-
 MINUS =[-]
 VAR=var
 BREAK=break
 IF =if
 ASTRISK =\*
-COLON_EQUAL = \:=
+COLON_EQUAL = \:\=
 ELSE =else
 PERCENT =\%
-DIVIDE =\/
-SHIFTLEFT=\<<
-SHIFTRIGHT=\>>
+SHIFTLEFT=\<\<
+SHIFTRIGHT=\>\>
 COMMENT =\//(.)*
 AND_OP =\&&
 SINGLE_AND =\&
-REL_OP = SMALLER|GREATER|EQUAL_EQUAL|LESS_EQUAL|GREATER_EQUAL
-SMALLER = \<
-GREATER = \>
-EQUAL_EQUAL = \==
-LESS_EQUAL = \=<
-GREATER_EQUAL = \>=
+REL_OP = \<|\>|(==)|(=<)|(>=)
 RETURN =return
 COLON = \:
-DOTS = \...;
+DOTS = \.\.\.;
 EXLIM =\!;
 SINGLE_OR =\|
 SEMI_COLON =\;
@@ -103,11 +97,12 @@ STRUCT =struct
 %% 
 <YYINITIAL> {PACKAGE} { return (new Symbol(sym.PACKAGE,yytext()));}
 <YYINITIAL> {TYPE} { return (new Symbol(sym.TYPE,yytext()));}
+
 <YYINITIAL> {STRUCT} { return (new Symbol(sym.STRUCT,yytext()));}
 <YYINITIAL> {SWITCH} { return (new Symbol(sym.SWITCH,yytext()));}
 <YYINITIAL> {CASE} { return (new Symbol(sym.CASE,yytext()));}
 <YYINITIAL> {DEFAULT} { return (new Symbol(sym.DEFAULT,yytext()));}
-
+<YYINITIAL> {DOTS} { return (new Symbol(sym.DOTS,yytext()));}
 <YYINITIAL> {SPACE} {}
 <YYINITIAL> {BREAKLINE} {Quote_count = 0;}
 <YYINITIAL> {REL_OP} { return (new Symbol(sym.REL_OP,yytext()));}
